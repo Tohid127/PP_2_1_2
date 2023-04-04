@@ -11,8 +11,8 @@ public class App {
 
         HelloWorld bean1 = (HelloWorld) applicationContext.getBean("helloworld");
 
-        Cat catBean1 = (Cat) applicationContext.getBean("cat");
-        Cat catBean2 = (Cat) applicationContext.getBean("cat");
+        Cat catBean1 = applicationContext.getBean("cat", Cat.class);
+        Cat catBean2 = applicationContext.getBean("cat", Cat.class);
 
         System.out.println("bean == bean1: " + (bean == bean1));
         System.out.println("catBean1 == catBean2: " + (catBean1 == catBean2));
